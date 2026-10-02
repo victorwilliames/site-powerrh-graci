@@ -9,6 +9,8 @@
   <meta property="og:title" content="PowerRH Consultoria — Advisory estratégico para empresas familiares">
   <meta property="og:description" content="Sua empresa familiar cresceu. Mérito seu. Agora garanta que ela continue expandindo sem depender 100% de você.">
   <!-- TODO: og:image — usar URL absoluta da foto oficial quando a Gracy enviar o material -->
+  <link rel="stylesheet" href="css/fonts-montserrat.css">
+  <link rel="stylesheet" href="css/fonts-inter.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/foto-placeholder.svg" type="image/svg+xml">
   <!-- TODO: favicon oficial da PowerRH quando a Gracy enviar a logo -->
@@ -78,7 +80,7 @@
               Atendimento com sigilo e discrição absolutos
             </p>
           </div>
-          <div class="reveal">
+          <div class="reveal hero__media">
             <!-- TODO: foto real da Gracy em ambiente corporativo (retrato profissional, alta resolução) -->
             <figure class="photo-placeholder photo-placeholder--portrait">
               <img src="assets/foto-placeholder.svg" alt="Espaço reservado para a foto profissional da Graciete Corrêa">
@@ -92,14 +94,16 @@
     <!-- ================= 2. O ESPELHO ================= -->
     <section class="section section--light" aria-labelledby="espelho-title">
       <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">02 — O espelho</p>
-          <h2 class="h2" id="espelho-title">O paradoxo do crescimento: sua empresa fatura bem, mas você ainda é escravo da operação?</h2>
-        </div>
-        <div class="prose reveal">
-          <p class="lead">Você dedicou décadas para erguer um patrimônio sólido. No entanto, hoje enfrenta uma frustração silenciosa: a sensação de que, se você se afastar por uma semana, o negócio perde o rumo.</p>
-          <p>Apagar incêndios diários, lidar com uma média liderança que não assume a responsabilidade integralmente e sentir a ansiedade sobre a capacidade da próxima geração de liderar são sinais de que a empresa engoliu a sua liberdade. O modelo que te trouxe até aqui não é o mesmo que garantirá o seu legado.</p>
-          <p>Sua empresa cresceu rapidamente, e até possui uma certa organização, mas ainda não está no patamar para enfrentar o futuro que deseja para empresa nos próximos anos.</p>
+        <div class="grid grid--espelho">
+          <div class="espelho__head reveal">
+            <p class="eyebrow">02 — O espelho</p>
+            <h2 class="h2" id="espelho-title">O paradoxo do crescimento: sua empresa fatura bem, mas você ainda é escravo da operação?</h2>
+          </div>
+          <div class="prose espelho__body reveal">
+            <p class="lead">Você dedicou décadas para erguer um patrimônio sólido. No entanto, hoje enfrenta uma frustração silenciosa: a sensação de que, se você se afastar por uma semana, o negócio perde o rumo.</p>
+            <p>Apagar incêndios diários, lidar com uma média liderança que não assume a responsabilidade integralmente e sentir a ansiedade sobre a capacidade da próxima geração de liderar são sinais de que a empresa engoliu a sua liberdade. O modelo que te trouxe até aqui não é o mesmo que garantirá o seu legado.</p>
+            <p>Sua empresa cresceu rapidamente, e até possui uma certa organização, mas ainda não está no patamar para enfrentar o futuro que deseja para empresa nos próximos anos.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -140,27 +144,39 @@
         <div class="pillars reveal">
           <a class="pillar" href="solucoes.html#pilar-1">
             <span class="pillar__num" aria-hidden="true">01</span>
-            <h3 class="h3 pillar__title">Cultura Organizacional</h3>
-            <p class="pillar__subtitle">Alinhamento, processos e rituais de gestão</p>
-            <p class="pillar__text">Transformamos a cultura informal em processos claros e planos de cargos estruturados que guiam o negócio sozinhos.</p>
-            <span class="pillar__link">Ver detalhes
+            <span class="pillar__main">
+              <h3 class="h3 pillar__title">Cultura Organizacional</h3>
+              <p class="pillar__subtitle">Alinhamento, processos e rituais de gestão</p>
+            </span>
+            <span class="pillar__side">
+              <p class="pillar__text">Transformamos a cultura informal em processos claros e planos de cargos estruturados que guiam o negócio sozinhos.</p>
+              <span class="pillar__link">Ver detalhes
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+            </span>
           </a>
           <a class="pillar" href="solucoes.html#pilar-2">
             <span class="pillar__num" aria-hidden="true">02</span>
-            <h3 class="h3 pillar__title">Líderes de Líderes</h3>
-            <p class="pillar__subtitle">Autonomia da média liderança / gestão</p>
-            <p class="pillar__text">Capacitamos seus gerentes e diretores para que pensem como donos, gerenciem indicadores e tirem o operacional das suas costas.</p>
-            <span class="pillar__link">Ver detalhes
+            <span class="pillar__main">
+              <h3 class="h3 pillar__title">Líderes de Líderes</h3>
+              <p class="pillar__subtitle">Autonomia da média liderança / gestão</p>
+            </span>
+            <span class="pillar__side">
+              <p class="pillar__text">Capacitamos seus gerentes e diretores para que pensem como donos, gerenciem indicadores e tirem o operacional das suas costas.</p>
+              <span class="pillar__link">Ver detalhes
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+            </span>
           </a>
           <a class="pillar" href="solucoes.html#pilar-3">
             <span class="pillar__num" aria-hidden="true">03</span>
-            <h3 class="h3 pillar__title">Sucessão e Governança</h3>
-            <p class="pillar__subtitle">Transição de bastão pacificada</p>
-            <p class="pillar__text">Preparação comportamental e técnica de herdeiros sucessores. O Advisor atua mediando a transição de pai para filho com total discrição.</p>
-            <span class="pillar__link">Ver detalhes
+            <span class="pillar__main">
+              <h3 class="h3 pillar__title">Sucessão e Governança</h3>
+              <p class="pillar__subtitle">Transição de bastão pacificada</p>
+            </span>
+            <span class="pillar__side">
+              <p class="pillar__text">Preparação comportamental e técnica de herdeiros sucessores. O Advisor atua mediando a transição de pai para filho com total discrição.</p>
+              <span class="pillar__link">Ver detalhes
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+            </span>
           </a>
         </div>
       </div>

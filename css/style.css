@@ -4,29 +4,6 @@
    Fontes auto-hospedadas em assets/fonts (sem dependência do Google Fonts).
    ============================================================ */
 
-/* ---------- 0. Fontes locais (variáveis) ---------- */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("../assets/fonts/montserrat-var-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("../assets/fonts/montserrat-italic-var-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("../assets/fonts/inter-var-latin.woff2") format("woff2");
-}
-
 /* ---------- 1. Tokens ---------- */
 :root {
   --navy-900: #081627;
@@ -773,17 +750,6 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* Linha dourada sutil no topo do hero (assinatura) */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 76px;
-  left: 0;
-  width: 120px;
-  height: 2px;
-  background: var(--gold-500);
-}
-
 .hero__title {
   margin: 0 0 24px;
 }
@@ -824,6 +790,40 @@ h1, h2, h3, h4 {
   height: 14px;
   stroke: var(--champagne-300);
   flex: none;
+}
+
+/* Hero no mobile: H1 menor e CTA dentro da primeira dobra (conversão) */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 0;
+    padding: calc(76px + 40px) 0 56px;
+  }
+  .hero .display {
+    font-size: clamp(1.9rem, 8.2vw, 2.4rem);
+    line-height: 1.12;
+  }
+  .hero__title {
+    margin-bottom: 16px;
+  }
+  .hero__sub {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .hero__seal-note {
+    margin-top: 16px;
+  }
+}
+
+/* Hero no desktop: placeholder compacto, tipografia com mais respiro */
+@media (min-width: 1024px) {
+  .hero .grid--7-5 {
+    grid-template-columns: 8fr 4fr;
+  }
+  .hero__media {
+    width: 100%;
+    max-width: 300px;
+    justify-self: end;
+  }
 }
 
 /* Placeholder de foto elegante (navy com padrão sutil) */
@@ -882,6 +882,18 @@ h1, h2, h3, h4 {
   margin-bottom: 24px;
 }
 
+/* Composição assimétrica: O Espelho (Home) */
+@media (min-width: 1024px) {
+  .grid--espelho {
+    grid-template-columns: 4fr 7fr;
+    gap: 72px;
+    align-items: start;
+  }
+  .espelho__body {
+    padding-top: 56px; /* deslocamento editorial */
+  }
+}
+
 /* ---------- 8. Pilares (Home) ---------- */
 .pillars {
   list-style: none;
@@ -909,6 +921,18 @@ h1, h2, h3, h4 {
   font-size: 2.5rem;
   line-height: 1;
   color: var(--gold-600);
+}
+
+.pillar__main {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.pillar__side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
 }
 
 .pillar__title {
@@ -952,24 +976,37 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 1024px) {
+  /* Índice editorial: linhas de largura total, numeral gigante sangrando */
   .pillars {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .pillar {
-    padding: 16px 40px 16px 0;
-    border-top: 0;
-    border-left: 1px solid var(--border);
-    padding-left: 40px;
+    padding: 44px 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+    padding-left: 0;
+    grid-template-columns: 120px 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
   }
 
   .pillar:first-child {
-    border-left: 0;
     padding-left: 0;
   }
 
   .pillar:last-child {
-    border-bottom: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pillar__num {
+    font-size: clamp(4.5rem, 6vw, 6rem);
+    letter-spacing: -0.02em;
+    margin-left: -8px; /* sangramento */
+  }
+
+  .pillar__title {
+    font-size: clamp(1.5rem, 1.75vw, 1.875rem);
   }
 }
 
@@ -1438,6 +1475,18 @@ h1, h2, h3, h4 {
 
 .field__label .required {
   color: var(--error);
+}
+
+/* Fieldset de radios: sem borda nativa, mesmo padrão dos demais campos */
+fieldset.field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+fieldset.field legend.field__label {
+  padding: 0;
 }
 
 .field__input {
