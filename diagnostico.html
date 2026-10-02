@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Reunião Estratégica de Diagnóstico | PowerRH Consultoria</title>
+  <meta name="description" content="Dê o próximo passo em direção à segurança do seu negócio. Reserve um horário para uma reunião estratégica de diagnóstico com um de nossos Advisors. Sigilo absoluto.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Agendar Reunião Estratégica de Diagnóstico — PowerRH">
+  <meta property="og:description" content="Reserve um horário para uma reunião estratégica de diagnóstico com um de nossos Advisors.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/foto-placeholder.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="wordmark" aria-label="PowerRH Consultoria — início">
+        Power<span class="wordmark__suffix">RH</span><span class="wordmark__rule" aria-hidden="true"></span>
+        <!-- TODO: substituir wordmark tipográfico pela logo oficial da PowerRH (SVG/PNG) -->
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="navbar__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="a-powerrh.html">A PowerRH</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="diagnostico.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="diagnostico.html" class="btn btn--primary-on-dark navbar__cta">Agendar reunião</a>
+      <button class="navbar__toggle" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer__overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Menu mobile">
+    <button class="drawer__close" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/>
+      </svg>
+    </button>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="a-powerrh.html">A PowerRH</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="diagnostico.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="diagnostico.html" class="btn btn--primary-on-dark drawer__cta">Agendar uma Reunião Estratégica</a>
+  </aside>
+
+  <main id="conteudo">
+    <!-- ================= HEADER ================= -->
+    <section class="page-header on-dark" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow reveal">Contato — Diagnóstico estratégico</p>
+        <h1 class="h1 reveal" id="page-title">Dê o próximo passo em direção à segurança do seu negócio.</h1>
+        <p class="lead reveal" style="color: var(--on-dark-secondary);">Reserve um horário para uma reunião estratégica de diagnóstico com um de nossos Advisors.</p>
+      </div>
+    </section>
+
+    <!-- ================= FORMULÁRIO ================= -->
+    <section class="section section--light" aria-labelledby="form-title">
+      <div class="container">
+        <div class="grid grid--7-5" style="align-items: start;">
+          <div class="reveal">
+            <h2 class="h3" id="form-title" style="margin-bottom: 32px;">Formulário de solicitação</h2>
+
+            <div id="form-alert" class="form-alert" role="alert" tabindex="-1" hidden>
+              Não foi possível enviar agora. Tente novamente em instantes ou chame diretamente pelo WhatsApp.
+            </div>
+
+            <form class="form" id="diagnostico-form" novalidate>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="f-nome">Nome do Proprietário / Diretor <span class="required" aria-hidden="true">*</span></label>
+                  <input class="field__input" type="text" id="f-nome" name="nome" autocomplete="name" required aria-required="true">
+                  <p class="field__error" role="alert"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-empresa">Nome da Empresa <span class="required" aria-hidden="true">*</span></label>
+                  <input class="field__input" type="text" id="f-empresa" name="empresa" autocomplete="organization" required aria-required="true">
+                  <p class="field__error" role="alert"></p>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="f-email">E-mail Corporativo <span class="required" aria-hidden="true">*</span></label>
+                  <input class="field__input" type="email" id="f-email" name="email" autocomplete="email" inputmode="email" required aria-required="true">
+                  <p class="field__error" role="alert"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-telefone">Telefone / WhatsApp Direto <span class="required" aria-hidden="true">*</span></label>
+                  <input class="field__input" type="tel" id="f-telefone" name="telefone" autocomplete="tel" inputmode="tel" required aria-required="true">
+                  <p class="field__error" role="alert"></p>
+                </div>
+              </div>
+
+              <fieldset class="field" data-group="colaboradores">
+                <legend class="field__label">Número de Colaboradores <span class="required" aria-hidden="true">*</span></legend>
+                <div class="radio-cards">
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="colaboradores" value="ate-30">
+                    <span class="radio-card__box">Até 30 colaboradores</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="colaboradores" value="31-100">
+                    <span class="radio-card__box">De 31 a 100 colaboradores</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="colaboradores" value="100-500">
+                    <span class="radio-card__box">De 100 a 500 colaboradores</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="colaboradores" value="500-mais">
+                    <span class="radio-card__box">Mais de 500 colaboradores</span>
+                  </label>
+                </div>
+                <p class="field__error" role="alert"></p>
+              </fieldset>
+
+              <fieldset class="field" data-group="desafio">
+                <legend class="field__label">Qual é o maior desafio atual da empresa? <span class="required" aria-hidden="true">*</span></legend>
+                <div class="radio-cards">
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="desafio" value="operacional">
+                    <span class="radio-card__box">Aliviar a carga operacional da rotina do fundador.</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="desafio" value="lideranca">
+                    <span class="radio-card__box">Desenvolver a média liderança para tomar decisões mais seguras.</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="desafio" value="sucessao">
+                    <span class="radio-card__box">Iniciar ou organizar o processo de sucessão familiar.</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="desafio" value="cultura">
+                    <span class="radio-card__box">Entender a cultura instalada e o que fazer para modelar a cultura desejada</span>
+                  </label>
+                  <label class="radio-card">
+                    <input class="radio-card__input visually-hidden" type="radio" name="desafio" value="desenho">
+                    <span class="radio-card__box">Melhorar o desenho organizacional e/ou processos e modelo de gestão</span>
+                  </label>
+                </div>
+                <p class="field__error" role="alert"></p>
+              </fieldset>
+
+              <div class="field">
+                <label class="consent" for="f-consent">
+                  <input class="consent__input" type="checkbox" id="f-consent" name="consentimento" value="sim" required aria-required="true">
+                  <span>Autorizo a PowerRH a entrar em contato comigo pelos dados informados para agendar a reunião de diagnóstico, conforme o compromisso de confidencialidade descrito nesta página.</span>
+                </label>
+                <p class="field__error" role="alert"></p>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn--primary form__submit">
+                  <span class="btn__spinner" aria-hidden="true"></span>
+                  <span class="btn__label">Solicitar Reunião de Diagnóstico</span>
+                  <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+                </button>
+              </div>
+            </form>
+
+            <!-- Painel de sucesso (exibido após o envio) -->
+            <div class="form-success" id="form-success" hidden role="status">
+              <div class="form-success__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4 12.5 10 18.5 20 6.5"/></svg>
+              </div>
+              <h2 class="h3">Recebemos seus dados.</h2>
+              <p>Obrigado pelo contato. Nossa equipe retornará em breve para agendar sua reunião estratégica de diagnóstico.</p>
+              <p class="small" style="color: var(--graphite-500);">Todas as informações compartilhadas estão protegidas pelo nosso compromisso de confidencialidade.</p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="seal" style="margin-bottom: 32px;">
+              <span class="seal__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              </span>
+              <div>
+                <p class="seal__title">Compromisso de Confidencialidade PowerRH</p>
+                <p class="seal__text">Garantimos absoluto sigilo e discrição sobre quaisquer dados, informações operacionais ou desafios familiares compartilhados neste formulário e durante nossas reuniões. Suas informações estarão protegidas sob estrito acordo de confidencialidade comercial.</p>
+              </div>
+            </div>
+
+            <h3 class="h4" style="margin-bottom: 12px;">Prefere chamar direto?</h3>
+            <p class="small" style="color: var(--graphite-500); margin-bottom: 16px;">Se preferir, inicie a conversa pelo WhatsApp. O formulário acima continua sendo o caminho recomendado, pois já qualifica seu desafio.</p>
+            <!-- TODO: número do WhatsApp comercial da Gracy (CONFIG.whatsapp em js/main.js) -->
+            <a href="#" data-config-whatsapp class="btn btn--secondary">Chamar no WhatsApp
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="wordmark" aria-label="PowerRH Consultoria — início">
+            Power<span class="wordmark__suffix">RH</span><span class="wordmark__rule" aria-hidden="true"></span>
+          </a>
+          <p>Advisory estratégico para empresas familiares da Região Norte: cultura, líderes e sucessão com senioridade, pragmatismo e discrição.</p>
+        </div>
+        <nav aria-label="Navegação do rodapé">
+          <p class="footer__title">Navegação</p>
+          <ul class="footer__nav">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="a-powerrh.html">A PowerRH</a></li>
+            <li><a href="solucoes.html">Soluções</a></li>
+            <li><a href="diagnostico.html">Agendar diagnóstico</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__title">Contato</p>
+          <ul class="footer__contact">
+            <li><a href="https://www.linkedin.com/in/gracietecorreacoach/" target="_blank" rel="noopener">LinkedIn — Graciete Corrêa</a></li>
+            <li><a href="https://www.instagram.com/gracietecoach/" target="_blank" rel="noopener">Instagram — @gracietecoach</a></li>
+            <!-- TODO: número do WhatsApp comercial da Gracy -->
+            <li><a href="#" data-config-whatsapp>WhatsApp comercial</a></li>
+            <!-- TODO: e-mail que recebe os contatos do site -->
+            <li><a href="#" data-config-email>E-mail: a definir</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> PowerRH Consultoria e Coaching Empresarial. Todos os direitos reservados.</p>
+        <p class="footer__seal-mini">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Site com compromisso de confidencialidade
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

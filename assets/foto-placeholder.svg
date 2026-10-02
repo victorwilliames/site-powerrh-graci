@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Espaço reservado para fotografia">
+  <defs>
+    <pattern id="lines" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="48" stroke="#1e3a56" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#0e2a44"/>
+  <rect width="800" height="600" fill="url(#lines)"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#b79b5e" stroke-width="1.5" opacity="0.5"/>
+  <text x="400" y="285" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="300" font-size="64" letter-spacing="8" fill="#d9cba6" opacity="0.85">PR</text>
+  <line x1="360" y1="320" x2="440" y2="320" stroke="#b79b5e" stroke-width="1.5" opacity="0.7"/>
+  <text x="400" y="352" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#a9b4c0" opacity="0.8">FOTOGRAFIA</text>
+</svg>
